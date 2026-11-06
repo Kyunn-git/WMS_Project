@@ -13,7 +13,7 @@ body{
 
 .mainwrap section{
     scroll-snap-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .mainwrap section h1{
@@ -28,6 +28,13 @@ body{
     font-size: 1.3em;
 }
 
+.mainwrap section button{
+    background-color: #ffe2df;
+    font-size: 30px;
+    border-radius: 0.5em;
+    min-width: 20vw;
+}
+
 /* Intro */
 #intro p{
     text-align: left;
@@ -38,10 +45,41 @@ body{
 
 #booking{
     text-align: center;
+    padding-bottom: 10vh;
 }
 
 #booking p{
     text-align: justify;
+}
+
+#moviecarousel{
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    padding-top: 20px;
+}
+
+
+#caroitem{
+     margin-left: -15px;
+}
+
+#caroitem img{
+ height: 17em;
+ width: 12em;
+ object-fit: contain;
+
+}
+
+#card{
+    background-color: aliceblue;
+    transition-duration: 99ms;
+}
+
+#card:hover{
+    transition-duration: 0.2s;
+    transform: rotateZ(10deg);
+    box-shadow: 0 5px 5px 5px #171515;
 }
 
 /* Menu Promotion */
