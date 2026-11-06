@@ -41,10 +41,14 @@ body{
     width: 50vw;
 }
 
+#intro{
+    padding-top: 10vh;
+}
 /* Booking promotion */
 
 #booking{
     text-align: center;
+    padding-top: 10vh;
     padding-bottom: 10vh;
 }
 
