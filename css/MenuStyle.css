@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.upcoming {
+    height: 70vw;
+    width: 95.3vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.movie {
+    overflow-x: auto;
+    flex-shrink: 0;
+    width: 20vw;
+    height: 30vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#welcome {
+    font-size: 2em;
+    align-self: center;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#welcdesc {
+    font-size: 1em;
+    align-self: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
