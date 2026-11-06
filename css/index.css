@@ -25,7 +25,7 @@ body{
 }
 
 .mainwrap section p{
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .mainwrap section button{
@@ -48,8 +48,7 @@ body{
 
 #booking{
     text-align: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 20vh;
 }
 
 #booking p{
@@ -75,6 +74,11 @@ body{
 
 }
 
+#caroitem p{
+    max-width: 5em;
+    overflow-wrap: break-word;
+}
+
 #card{
     background-color: aliceblue;
     transition-duration: 99ms;
@@ -87,10 +91,25 @@ body{
 }
 
 /* Menu Promotion */
+#menu{
+    padding-top: 20vh;
+    display: flex;
+}
 
+#menu p{
+    width: 50vw;
+    text-align: justify;
+}
+
+
+#menu table img{
+    width: 150px;
+    height: 100px;
+}
 
 
 /* Contact Promotion */
 #contact{
+    padding-top: 20vh;
     text-align: right;
 }
