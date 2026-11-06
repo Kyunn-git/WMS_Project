@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="navbar"><h1>Coffee Roll</h1> <script src="navbar.js"></script></div>
+    <div id="navbar" style="z-index: 2;"><h1>Coffee Roll</h1> <script src="navbar.js"></script></div>
     <div class="mainwrap">
         <section id="intro">
             <h1>Coffee <br>Roll</h1>
@@ -60,11 +60,21 @@
             </p>
             <button>Menu</button>
             </div>
-            <div id="foodwrapper">
-                <div id="fooditem">
-                    <img src="imgs/bread.png">
+            <div id="foodcaro">
+                <div id="leftarrow"></div>
+                <div id="fooditem" data-active>
                     <p>Avocado Toast</p>
+                    <img src="imgs/bread.png">
                 </div>
+                 <div id="fooditem">
+                    <p>Avocado Toast</p>
+                    <img src="imgs/bread.png">
+                 </div>
+                 <div id="fooditem">
+                    <p>Avocado Toast</p>
+                    <img src="imgs/bread.png">
+                 </div>
+                 <div id="rightarrow"></div>
             </div>
         </section>
         <section id="contact">

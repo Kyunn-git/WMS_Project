@@ -101,12 +101,53 @@ body{
     text-align: justify;
 }
 
-
-#menu table img{
-    width: 150px;
-    height: 100px;
+#foodcaro{
+    position: relative;
 }
 
+#fooditem{
+    position: absolute;
+    opacity: 0%;
+}
+
+#fooditem[data-active]{
+    opacity: 100%;
+}
+
+#fooditem p{
+    text-align: center;
+    transform: translateY(5vh);
+}
+
+#fooditem img{
+    display: block;
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+#leftarrow{
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-right: 2em solid #ffe2df;
+    border-bottom: 1em solid transparent;
+    position: absolute;
+    transform: translateX(2vw) translateY(35vh);
+}
+
+
+
+#rightarrow{
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-left: 2em solid #ffe2df;
+    border-bottom: 1em solid transparent;
+    position: absolute;
+    transform: translateX(40vw) translateY(34vh);
+}
 
 /* Contact Promotion */
 #contact{
