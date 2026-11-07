@@ -107,11 +107,7 @@ body{
 
 .fooditem{
     position: absolute;
-    opacity: 0%;
-}
-
-.fooditem[data-active]{
-    opacity: 100%;
+    transform: translateX(2vw);
 }
 
 .fooditem p{

@@ -1,0 +1,358 @@
+/* contact.css - Showtime contact page */
+
+:root {
+  --black: #000000;
+  --maroon: #360c0c;
+  --brown: #4f2208;
+  --olive: #525838;
+  --peach: #ffe3d1;
+  --peach-dim: #d9bfae;
+  --error: #ff9b82;
+  --line: rgba(255, 227, 209, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--peach);
+  background: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--peach);
+  outline-offset: 3px;
+}
+
+/* ---------- Navigation ---------- */
+
+.site-nav {
+  background: var(--maroon);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.site-nav ul a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--peach-dim);
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav ul a:hover {
+  background: var(--brown);
+  color: var(--peach);
+}
+
+/* current page */
+.site-nav ul a[aria-current="page"] {
+  background: var(--olive);
+  color: var(--peach);
+}
+
+/* ---------- Page layout ---------- */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.page-head {
+  margin-bottom: 32px;
+}
+
+.page-head h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.page-head p {
+  max-width: 60ch;
+  color: var(--peach-dim);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ---------- Contact info ---------- */
+
+.info-list {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.info-list li {
+  background: var(--brown);
+  border-left: 4px solid var(--olive);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.info-list h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.info-list p {
+  color: var(--peach-dim);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Form card ---------- */
+
+.form-card {
+  background: var(--maroon);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.form-card > h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.field {
+  margin-bottom: 18px;
+  min-width: 0;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.opt {
+  font-weight: normal;
+  color: var(--peach-dim);
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font: inherit;
+  color: var(--peach);
+  background: var(--black);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(217, 191, 174, 0.55);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--peach-dim);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--peach);
+  background: #120505;
+}
+
+select {
+  cursor: pointer;
+}
+
+select option {
+  background: var(--black);
+  color: var(--peach);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.counter {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--peach-dim);
+  margin-top: 4px;
+}
+
+/* ---------- Validation ---------- */
+
+.error-msg {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: var(--error);
+}
+
+/* covers the usual ways a script marks a bad field */
+input.error,
+select.error,
+textarea.error,
+input.invalid,
+select.invalid,
+textarea.invalid,
+.field.error input,
+.field.error select,
+.field.error textarea,
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea,
+[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--peach);
+  border-radius: 8px;
+  background: var(--peach);
+  color: var(--black);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--peach);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--peach);
+}
+
+.btn--ghost:hover {
+  background: var(--peach);
+  border-color: var(--peach);
+  color: var(--black);
+}
+
+/* ---------- Success message ---------- */
+
+.form-success {
+  text-align: center;
+  padding: 24px 8px;
+}
+
+.form-success[hidden] {
+  display: none;
+}
+
+.form-success h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.form-success p {
+  color: var(--peach-dim);
+  margin-bottom: 20px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--maroon);
+  border-top: 1px solid var(--line);
+  padding: 20px 24px;
+  text-align: center;
+  color: var(--peach-dim);
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-head h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 24px 18px;
+  }
+}
