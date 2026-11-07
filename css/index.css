@@ -105,21 +105,21 @@ body{
     position: relative;
 }
 
-#fooditem{
+.fooditem{
     position: absolute;
     opacity: 0%;
 }
 
-#fooditem[data-active]{
+.fooditem[data-active]{
     opacity: 100%;
 }
 
-#fooditem p{
+.fooditem p{
     text-align: center;
     transform: translateY(5vh);
 }
 
-#fooditem img{
+.fooditem img{
     display: block;
     width: 40vw;
     height: auto;
@@ -127,7 +127,7 @@ body{
     object-position: center;
 }
 
-#leftarrow{
+#prev{
     width: 0;
     height: 0;
     border-top: 1em solid transparent;
@@ -139,7 +139,7 @@ body{
 
 
 
-#rightarrow{
+#next{
     width: 0;
     height: 0;
     border-top: 1em solid transparent;
