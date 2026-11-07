@@ -18,7 +18,6 @@
 }
 
 body{
-  line-height: 1.6;
   color: var(--peach);
   background: var(--black);
   display: flex;
@@ -32,58 +31,6 @@ a {
 :focus-visible {
   outline: 3px solid var(--peach);
   outline-offset: 3px;
-}
-
-/* ---------- Navigation ---------- */
-
-.site-nav {
-  background: var(--maroon);
-  border-bottom: 1px solid var(--line);
-}
-
-.site-nav__inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.brand {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-}
-
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-}
-
-.site-nav ul a {
-  display: block;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--peach-dim);
-  transition: background 0.2s, color 0.2s;
-}
-
-.site-nav ul a:hover {
-  background: var(--brown);
-  color: var(--peach);
-}
-
-/* current page */
-.site-nav ul a[aria-current="page"] {
-  background: var(--olive);
-  color: var(--peach);
 }
 
 /* ---------- Page layout ---------- */
@@ -101,7 +48,6 @@ main {
 }
 
 .page-head h1 {
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 2.6rem;
   line-height: 1.15;
   margin-bottom: 8px;
@@ -135,7 +81,6 @@ main {
 }
 
 .info-list h2 {
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.15rem;
   margin-bottom: 4px;
 }
@@ -156,7 +101,6 @@ main {
 }
 
 .form-card > h2 {
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
@@ -312,7 +256,6 @@ textarea.invalid,
 }
 
 .form-success h2 {
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
