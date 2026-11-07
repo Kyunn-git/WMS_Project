@@ -1,0 +1,106 @@
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-GigkqET0oLFh5ghaJF6qJCCrOfaO8dQo1QYYCCRXPy_v_WQcTaH4O8&s=10");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-color: #b5080c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.topbar h2 {
+    color: blanchedalmond;
+}
+
+.FoodTypes {
+    display: flex;          
+    justify-content: center; 
+    gap: 20px;              
+}
+
+.FoodTypes button {
+    padding: 10px 20px;
+    border: none;
+    border-right: 1px solid #EFE201;
+    background: none;
+    color: blanchedalmond;
+    cursor: pointer;
+    text-align: center;
+}
+
+.FoodTypes button:last-child {
+    border-right: none;
+}
+
+main{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Foods{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.FoodBox{
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 15vw;
+    height: 5%;
+    
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.counter button {
+    width: 3vw;
+    height: 5vh;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.quantity {
+    font-size: 4vh;
+}
+
+.FoodBox img{
+    width: 100%;
+    height: 25vh;
+    border-radius: 5px;
+}
+
+.FoodCatogaries {
+    scroll-margin-top: 100px;
+}
+
+.FoodCatogaries hr {
+    width: 100vw;
+}
