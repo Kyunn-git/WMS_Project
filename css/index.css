@@ -28,11 +28,16 @@ body{
     font-size: 1.5em;
 }
 
-.mainwrap section button{
+.mainwrap section a{
+    display: inline-block;
     background-color: #ffe2df;
     font-size: 30px;
     border-radius: 0.5em;
-    min-width: 20vw;
+    width: 25vw;
+    text-decoration: none;
+    color: #171515;
+    padding: 5px;
+    text-align: center;
 }
 
 /* Intro */
@@ -49,6 +54,7 @@ body{
 #booking{
     text-align: center;
     padding-top: 20vh;
+    padding-bottom: 9vh;
 }
 
 #booking p{

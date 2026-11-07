@@ -6,6 +6,7 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
  height: 3000px;
  margin: 0%;
  overscroll-behavior:contain contain;
+ font-family: "PT Serif", serif;
 }
 
 #navbar{
@@ -23,12 +24,31 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
 .navbuttons{
     display: flex;
     padding-right: 2vw;
-    height: 7vh;
+    height: 5vh;
+    transform: translateY(14px);
+    text-align: center;
 }
 
-.navbuttons button{
+.navbuttons a{
     width: 10vw;
-    height: inherit;
+    background-color: #FFE2D1;
+    color: #000000;
     margin: 5px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
 
+#navbar h1 a{
+    text-decoration: none;
+    color: #FFE2D1;
+    padding-left: 2vw;
+    transition-duration: 120ms;
+    font-family: Limelight;
+}
+
+#navbar h1 a:hover{
+    color: #c7aea0;
+    font-size: 101%;
+    transition-duration: 120ms;
 }

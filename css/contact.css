@@ -17,12 +17,10 @@
   padding: 0;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+body{
   line-height: 1.6;
   color: var(--peach);
   background: var(--black);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
