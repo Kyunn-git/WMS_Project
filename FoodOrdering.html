@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe's Menu</title>
+    <link rel="stylesheet" href="FoodOrdering.css">
+</head>
+<body>
+    <div class="topbar">
+        <h2>Cafe's Menu</h2>
+
+        <div class="FoodTypes">
+            <button onclick="goToMenu('appetizer')">Appetizer</button>
+            <button onclick="goToMenu('mains')">Mains</button>
+            <button onclick="goToMenu('desserts')">Desserts</button>
+            <button onclick="goToMenu('drinks')">Drinks</button>
+        </div>
+    </div>
+    <main>
+        <div class="FoodCatogaries" id="appetizer">
+            <h2>Appertizer</h2>
+            <hr>
+            <div class="Foods">
+                <div class="FoodBox" data-priced="8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfEOIvuLV-6pcqkftId6QjLTi5Ji3-5kQ8EseQbatCQ&s=10" alt="nothing">
+                    <p>Bread sticks - 8$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-priced="10">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZYRaR1XUwXebL1ekLG0WB9aElPpFBV9leagwIQDeIA&s=10" alt="nothing">
+                    <p>Mushroom soup - 10$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="14">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB8qP-KJ7L_k9sOTwLlK-9ESBQ0Xt67Y5SkpXE1MeQkQ&s=10" alt="nothing">
+                    <p>Mozzerella sticks - 14$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="12">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbU4Uk5o4A3mvL--R4Ok6jFzeI0SkJOhn5Ky_LP8uTZA&s=10">
+                    <p>Fries - 12$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="16">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC1kdeLc_r8DBeUHFTnHTXiO1iv9z6Gq-8jBOAH3hmUg&s=10" alt="nothing">
+                    <p>Shrimp balls - 16$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="FoodCatogaries" id="mains">
+            <h2>Main</h2>
+            <hr>
+            <div class="Foods">
+                <div class="FoodBox" data-price="22">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIb4sZ_GrZqBWudYVF-KEM-CC_acoZWf-eqlwU8X7RIg&s=10" alt="nothing">
+                    <p>chicken chop - 22$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>  
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>beef steak - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="26">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYpos1dTcLytwkvsmS6V266Fe2e8fDRpD9RkI_BKYN_A&s=10" alt="nothing">
+                    <p>fish & chip - 26$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="20">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePjzgmde9yP2qXyAE_ylORQ9c1QvAB_S4XKX0vGesJA&s=10" alt="nothing">
+                    <p>spaghetti - 20$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="22">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFQik71IGQbGmUQFew1bNg7FtqlV4bCRxPE5eQs7UWA&s=10" alt="nothing">
+                    <p>carbonara - 22$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbcwV5gjKyzFKfLcV2XNRMTOnoB-LbP9t0DKl11VQNGw&s=10" alt="nothing">
+                    <p>pesto - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="18">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRPb8q36Ni226ZCPCrwm7ORxft9SZInHu6i2eLkn06OQ&s=10" alt="nothing">
+                    <p>mac & cheese - 18$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="22">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlDokuuur6MkQYWit-Y7NKPQaTNT0yxXO7HpS2JJ18bg&s=10">
+                    <p>chicken burger - 22</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="26">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-CwQBdPyPIMiObOxIrdcL5Vv2HbCWyQeXabIQBceaqw&s=10" alt="nothing">
+                    <p>beef burger - 12$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="32">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfPiZzdTXnB8BV-uwqv5RXAEMxGgoQ5zxY4jIzCXcjA&s=10" alt="nothing">
+                    <p>softshell crab burger - 32$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="FoodCatogaries" id="desserts">
+            <h2>Desserts</h2>
+            <hr>
+            <div class="Foods">
+                <div class="FoodBox" data-price="16">
+                    <img src="parfait_text.png" alt="nothing">
+                    <p>fruit parfait - 16$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="12">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNz_tPE4a6Q1MU-iSOG2JMAuoTV6DG5Qk_EHldr4FFgQ&s=10" alt="nothing">
+                    <p>chocolate icecream - 12$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="18">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ZFLgtUvdldzzHmebT1O_89PoM5GrICjTus0O5ZrVwg&s=10" alt="nothing">
+                    <p>cheese cake - 18$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="FoodCatogaries" id="drinks">
+            <h2>Drinks</h2>
+            <hr>
+            <div class="Foods">
+                <div class="FoodBox" data-price="22">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIb4sZ_GrZqBWudYVF-KEM-CC_acoZWf-eqlwU8X7RIg&s=10" alt="nothing">
+                    <p>chicken chop - 22$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>  
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+                <div class="FoodBox" data-price="30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnuuYkc4UqK0ET8JIskKDUcVnaJEfj9_CISSJ2C0Uf8g&s=10" alt="nothing">
+                    <p>chicken chop - 30$</p>
+                    <div class="counter">
+                        <button onclick="changeQty(this, -1)">-</button>
+                        <span class="quantity">0</span>
+                        <button onclick="changeQty(this, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function changeQty(button, amount) {
+            let counter = button.parentElement;
+            let quantity = counter.querySelector(".quantity");
+
+            let currentQty = parseInt(quantity.innerText);
+
+            currentQty += amount;
+
+            if (currentQty < 0) {
+                currentQty = 0;
+            }
+
+            quantity.innerText = currentQty;
+        }
+
+        function goToMenu(category) {
+
+            let section = document.getElementById(category);
+
+                section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+    </script>
+</body>
+</html>
