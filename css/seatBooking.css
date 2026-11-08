@@ -1,0 +1,69 @@
+
+.mainwrap{
+    margin: 5vw;
+}
+
+.contentwrap{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4vw;
+}
+
+.seatpicker{
+    background-color: black;
+}
+
+
+/* Seat display */
+
+.seatlayout{
+    background-color: black;
+}
+
+
+.layoutDisp{
+    display: grid;
+    grid-template-areas:
+    'moviescreen moviescreen moviescreen'
+    'row1 row2 row3'
+    'row1 row2 row3'  
+    'row1 row2 row3'
+    ;
+    justify-content:space-evenly;
+}
+
+.chairs{
+    display: flex;
+    flex-direction: column;
+}
+
+.chairitem{
+    text-align: center;
+}
+
+.layoutDisp img{
+    max-width: 7vw;
+    height: inherit;
+}
+
+.row1{
+    grid-area: row1;
+}
+
+.row2{
+    grid-area: row2;
+}
+
+.row3{
+    grid-area: row3;
+}
+
+.moviescreen{
+    background-color: #ffe2df;
+    height: 5vh;
+    text-align: center;
+    color: black;
+    font-family: LimeLight, serif;
+    font-size: 2em;
+    grid-area: moviescreen;
+}
