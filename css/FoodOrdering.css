@@ -1,10 +1,3 @@
-body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-GigkqET0oLFh5ghaJF6qJCCrOfaO8dQo1QYYCCRXPy_v_WQcTaH4O8&s=10");
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 html {
     scroll-behavior: smooth;
