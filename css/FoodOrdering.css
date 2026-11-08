@@ -10,49 +10,44 @@ html {
     scroll-behavior: smooth;
 }
 
-.topbar{
+.sidebar{
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    height: 20%;
-    width: 100%;
-    background-color: #b5080c;
+    height: 90%;
+    width: 15vw;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 10%;
 }
 
 
-.topbar h2 {
+.sidebar h2 {
     color: blanchedalmond;
 }
 
-.FoodTypes {
-    display: flex;          
-    justify-content: center; 
-    gap: 20px;              
-}
 
-.FoodTypes button {
+.sidebar button {
     padding: 10px 20px;
     border: none;
-    border-right: 1px solid #EFE201;
     background: none;
     color: blanchedalmond;
     cursor: pointer;
     text-align: center;
+    height: 10vh;
+    width: 8vw;
 }
 
-.FoodTypes button:last-child {
-    border-right: none;
-}
 
 main{
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 15vw;
 }
 
 .Foods{
@@ -99,8 +94,9 @@ main{
 
 .FoodCatogaries {
     scroll-margin-top: 100px;
+    scroll-margin-left: 300px;
 }
 
 .FoodCatogaries hr {
-    width: 100vw;
+    width: 80vw;
 }

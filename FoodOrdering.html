@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe's Menu</title>
     <link rel="stylesheet" href="css/FoodOrdering.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
 </head>
 <body>
-    <div class="topbar">
+    <div id="navbar" style="z-index: 2;">
+        <h1><a href="index.html">Coffee Roll</a></h1>
+        <div class="navbuttons">
+            <a href="Movies.html">Book</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <script src="navbar.js"></script></div>
+
+    <div class="sidebar">
         <h2>Cafe's Menu</h2>
 
-        <div class="FoodTypes">
-            <button onclick="goToMenu('appetizer')">Appetizer</button>
-            <button onclick="goToMenu('mains')">Mains</button>
-            <button onclick="goToMenu('desserts')">Desserts</button>
-            <button onclick="goToMenu('drinks')">Drinks</button>
-        </div>
+        <button onclick="goToMenu('appetizer')">Appetizer</button>
+        <button onclick="goToMenu('mains')">Mains</button>
+        <button onclick="goToMenu('desserts')">Desserts</button>
+        <button onclick="goToMenu('drinks')">Drinks</button>
     </div>
     <main>
         <div class="FoodCatogaries" id="appetizer">
