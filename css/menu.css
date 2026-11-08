@@ -17,4 +17,9 @@ main{
 .food img {
     width: 24vw;
     height: 36vh;
+    object-fit: contain;
+}
+
+.header h2{
+    font-size: 5vw;
 }
