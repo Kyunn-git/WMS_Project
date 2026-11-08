@@ -74,20 +74,21 @@
             <a href="menu.html">Menu</a>
             </div>
             <div id="foodcaro">
-                <div id="prev"></div>
-                <div class="fooditem" data-active>
+                
+                <div class="fooditem fade">
                     <p>Avocado Toast</p>
                     <img src="imgs/bread.png">
                 </div>
-                 <div class="fooditem">
+                 <div class="fooditem fade">
                     <p>Avocado Toast</p>
                     <img src="imgs/taiyaki.png">
                  </div>
-                 <div class="fooditem">
+                 <div class="fooditem fade">
                     <p>Avocado Toast</p>
                     <img src="imgs/yogurtbowl.png">
                  </div>
-                 <div id="next"></div>
+                 <div id="prev" onclick="plusSlides(-1)"></div>
+                 <div id="next" onclick="plusSlides(1)"></div>
             </div>
         </section>
         <section id="contact">
@@ -99,5 +100,6 @@
             <a href="contact.html">Inquire</a>
         </section>
     </div>
+    
 </body>
 </html>
