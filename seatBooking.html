@@ -24,7 +24,24 @@
     <h1>Choose Your Seats</h1>
     <div class="contentwrap">
         <div class="seatpicker">
-            Pick from the available seats below!
+            <p style="font-weight: bold; font-size: 2em; text-align: center;">Pick from the available seats below!</p>
+            <p>Due to limited seating, we only allow reserve for one seat per booking. Please contact us if you are coming in a group of 5 or more people</p>
+            <form action="">
+                <label for="pax" style="font-size: larger;">I am booking for...</label>
+                <select name="pax" id="noPax">
+                    <option value="2">1-2 people</option>
+                    <option value="4">3-4 people</option>
+                </select>
+                    <div id="seatType">
+                        <img src="imgs/duoseat.png">
+                        <img src="imgs/roundseat.png">
+                    </div>
+                <div id="duoSeatSelector">
+                    <h2>Seat Selection</h2>
+                    <label for="seat1">Seat 1</label>
+                    <input type="radio" id="seat1" name="duoSeatOption" value="seat1">
+                </div>
+            </form>
         </div>
         <div class="seatlayout">
             <h2 style="text-align: center;">Cafe Layout</h2>

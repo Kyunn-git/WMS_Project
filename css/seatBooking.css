@@ -4,20 +4,41 @@
 }
 
 .contentwrap{
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 4vw;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+
+/* Seat Booking */
 
 .seatpicker{
     background-color: black;
+    width: 55vw;
+    padding: 1.5vw;
 }
 
+
+.seatpicker form{
+    margin-right: 10vw;
+    margin-top: 40px;
+}
+
+#seatType{
+    float: right;
+    transform: translateY(-4vh);
+}
+
+#seatType img{
+    width: 100px;
+    height: inherit;
+    position: absolute;
+}
 
 /* Seat display */
 
 .seatlayout{
     background-color: black;
+    width: 30vw;
 }
 
 
@@ -39,6 +60,10 @@
 
 .chairitem{
     text-align: center;
+}
+
+.chairitem p{
+    margin-bottom: -10px;
 }
 
 .layoutDisp img{
