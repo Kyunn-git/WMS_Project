@@ -128,8 +128,8 @@
                     </div>
                 </div>
                 <div class="FoodBox" data-price="12">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNz_tPE4a6Q1MU-iSOG2JMAuoTV6DG5Qk_EHldr4FFgQ&s=10" alt="nothing">
-                    <p>chocolate icecream - 12$</p>
+                    <img src="imgs/yogurtbowl.png" alt="nothing">
+                    <p>Yogurt Bowl - 12$</p>
                     <div class="counter">
                         <button onclick="changeQty(this, -1)">-</button>
                         <span class="quantity">0</span>
@@ -137,8 +137,8 @@
                     </div>
                 </div>
                 <div class="FoodBox" data-price="18">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ZFLgtUvdldzzHmebT1O_89PoM5GrICjTus0O5ZrVwg&s=10" alt="nothing">
-                    <p>cheese cake - 18$</p>
+                    <img src="imgs/taiyaki.png" alt="nothing">
+                    <p>taiyaka shareplate - 18$</p>
                     <div class="counter">
                         <button onclick="changeQty(this, -1)">-</button>
                         <span class="quantity">0</span>
@@ -190,32 +190,6 @@
             </div>
         </div>
     </main>
-    <script>
-        function changeQty(button, amount) {
-            let counter = button.parentElement;
-            let quantity = counter.querySelector(".quantity");
-
-            let currentQty = parseInt(quantity.innerText);
-
-            currentQty += amount;
-
-            if (currentQty < 0) {
-                currentQty = 0;
-            }
-
-            quantity.innerText = currentQty;
-        }
-
-        function goToMenu(category) {
-
-            let section = document.getElementById(category);
-
-                section.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-
-    </script>
+    <script src="FoodOrdering.js"></script>
 </body>
 </html>
