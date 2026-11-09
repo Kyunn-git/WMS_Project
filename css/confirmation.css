@@ -116,3 +116,49 @@ main {
   color: var(--black);
 }
 
+
+/* QR Ticket */
+
+.e-ticket{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vw;
+  background-color: black;
+  border: dashed var(--peach) 2px;
+  width: 30vw;
+  text-align: center;
+  padding-top: 5px;
+  overflow: scroll;
+}
+
+.e-ticket img{
+  object-fit: cover;
+  display: block;
+  width: 25vw;
+  height: auto;
+  padding: 1em;
+
+}
+
+.ticketWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px){
+
+  .e-ticket{
+    width: 70vw;
+    height: 80vh;
+  }
+
+  .e-ticket img{
+    width: 40vw;
+  }
+}
