@@ -5,12 +5,18 @@ body {
 }
 
 .header {
+    opacity: 0;
+    animation-delay: 0;
     display: flex;
+    animation: fadeUp 1s ease-out forwards;
     flex-direction: column;
     line-height: 0.5;
 }
 
 .upcoming { 
+    opacity: 0; 
+    animation-delay: 0.3s !important;
+    animation: fadeUp 1s ease-out forwards;
     margin: 0 auto 0 auto; 
     max-height: 70vw;
     width: 90vw;
@@ -22,7 +28,7 @@ body {
 }
 
 .movie {
-    overflow-x: auto;
+    position: relative; 
     flex-shrink: 0;
     width: 20vw;
     height: 30vw;
@@ -30,6 +36,15 @@ body {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.moviecont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 1vw;
+    margin-left: 1vw;
 }
 
 .movie1 {
@@ -61,6 +76,33 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.movie:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.showinfo {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 200px; 
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #FFE2D1;
+    padding: 15px;
+    border-radius: 1vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.movie:hover .showinfo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
 
 #welcdesc {
     font-size: 1em;
@@ -76,4 +118,15 @@ body {
     background-color: black;
     display: flex;
     flex-direction: row;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);   
+  }
 }
