@@ -121,3 +121,64 @@ main{
     transform: scale(1.08);
     background-color: #ffcfb4;
 }
+
+.popupcart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.receipt {
+    background-color: #FFE2D1;
+    color: #4F0E14;
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    font-family: "PT Serif", serif;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+.receipt h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#receiptitems {
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 15px 0;
+    font-size: 0.95em;
+}
+
+.receiptbtns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.receiptbtns button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: "PT Serif", serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closebtn {
+    background-color: #d9a0a0;
+    color: #4F0E14;
+}
+
+.checkoutbtn {
+    background-color: #4F0E14;
+    color: #FFE2D1;
+}
