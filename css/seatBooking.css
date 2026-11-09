@@ -34,6 +34,23 @@
     position: absolute;
 }
 
+.goNext{
+    display: block;
+    background-color: #525636;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ffe2df;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+select{
+    background-color: #525636;
+    color: #ffe2df  ;
+    width: 15em;
+}
+
 /* Seat display */
 
 .seatlayout{
