@@ -106,7 +106,7 @@ function checkoutCart() {
         const emptyCartMsg = confirm("Your cart is empty. Do you want to continue without ordering anything?");
         if (emptyCartMsg) {
             alert("Order confirmed! See you then! 🎥");
-            window.location.href = "index.html"; 
+            window.location.href = "confirmation.html"; 
         } else {
             closeCart();    
         }
@@ -115,7 +115,7 @@ function checkoutCart() {
     
     let subtotal = localStorage.getItem('cafeSubtotal') || 0;
     alert("Order confirmed! See you then! 🎥");
-    window.location.href = "index.html"; 
+    window.location.href = "confirmation.html"; 
 
 }
 
