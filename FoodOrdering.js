@@ -34,7 +34,15 @@ function updateCartTotal() {
         const qty = parseInt(box.querySelector('.quantity').textContent);
         if (qty > 0) {
             const nameText = box.querySelector('p').textContent;
-            const price = parseFloat(box.getAttribute('data-priced')) || 0;
+
+            let price = 0;
+            const priceMatch = nameText.match(/(\d+)\s*\$/);
+            if (priceMatch) {
+                price = parseFloat(priceMatch[1]);
+            } else {
+                // if text match fails, try to get price from data-price or data-priced attribute
+                price = parseFloat(box.getAttribute('data-price') || box.getAttribute('data-priced')) || 0;
+            }
             
             totalItems += qty;
             subtotal += qty * price;
