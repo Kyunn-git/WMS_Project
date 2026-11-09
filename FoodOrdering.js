@@ -59,8 +59,8 @@ function goHome() {
 
 function openCart() {
     updateCartTotal(); 
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const subtotal = localStorage.getItem('subtotal') || 0;
+    const cart = JSON.parse(localStorage.getItem('cafeCart')) || [];
+    const subtotal = localStorage.getItem('cafeSubtotal') || 0;
     
     const itemsContainer = document.getElementById('receiptitems');
     itemsContainer.innerHTML = "";
