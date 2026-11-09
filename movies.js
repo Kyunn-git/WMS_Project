@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".filter");
-  const items = document.querySelectorAll(".movie-card");
+  const items = document.querySelectorAll(".movie");
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
-      const selectedCategory = button.getAttribute("data-target");
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+      const chosenCategory = button.getAttribute("data-target");
 
       items.forEach(item => {
-        const itemCategory = item.getAttribute("data-category");
+        const movieCategory = item.getAttribute("data-category");
 
-        if (selectedCategory === "all" || itemCategory === selectedCategory) {
+        if (chosenCategory === "all" || movieCategory === chosenCategory) {
           item.classList.remove("hidden");
         } else {
           item.classList.add("hidden");

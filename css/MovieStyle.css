@@ -63,7 +63,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    opacity: 1;
+    transform: scale(1);
+    max-width: 50vw;
+    visibility: visible;
+    transition: opacity 1s ease, transform 1s ease, max-width 1s ease, margin 1s ease, visibility 0.4s ease;
 }
+
 
 .moviecont {
     display: flex;
@@ -166,5 +172,11 @@ body {
 }
 
 .hidden {
-  display: none !important;
+    opacity: 0 !important;
+    transform: scale(0.8) !important;
+    max-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
 }
