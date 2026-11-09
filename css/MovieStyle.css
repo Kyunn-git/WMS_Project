@@ -18,13 +18,14 @@ body {
     animation-delay: 0.5s !important;
     animation: fadeUp 1s ease-out forwards;
     margin: 0 auto 0 auto; 
-    max-height: 70vw;
+    max-height: 60vw;
     width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .filterbtns {
@@ -35,6 +36,11 @@ body {
     justify-content: center;
     margin-bottom: 2vw;
     margin: 0;
+}
+
+.filter:hover {
+    background-color:rgb(206, 158, 162);
+    animation: fade;
 }
 
 .filter {
@@ -58,7 +64,7 @@ body {
     flex-shrink: 0;
     width: 20vw;
     height: 30vw;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -78,6 +84,20 @@ body {
     margin-left: 1vw;
 }
 
+.tbd {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #FFE2D1;
+    font-size: 1.5em;
+    align-items: center;
+    align-self: center;
+    line-height: 0;
+    margin-top: 50%;    
+    opacity: 1;
+    visibility: visible;
+}
 
 .showinfo {
     display: flex;
@@ -94,6 +114,12 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.showinfo p {
+    margin: 0 0 1vw 0;  
+    font-family: "PT Serif", serif;
+    font-size: 1vw; 
 }
 
 .movie1 {
@@ -113,6 +139,11 @@ body {
 
 .movie4 {
     background-image: url('../imgs/spirited-away.jpg');
+    background-size: cover;
+}
+
+.movie5 {
+    background-image: url('../imgs/Hong_Kong_97.jpg');
     background-size: cover;
 }
 
@@ -148,10 +179,17 @@ body {
 }
 
 #dates {
-    border: .1vw solid #FFE2D1;
-    border-collapse: collapse;
+    margin-top: 1vw;
     margin: 0 auto;
     align-self: center;
+    border-collapse: collapse;
+    margin-bottom: 2vw;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: .1vw solid #FFE2D1;
 }
 
 .footer {
@@ -170,7 +208,17 @@ body {
     pointer-events: none;
 }
 
-/* Fade up animation (previously in moviestyle.css) */
+h2 {
+    margin-left: 44vw;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.tbls {
+    margin-left: 35vw;
+    margin-top: 0;
+    margin-bottom: 2vw;
+}
 
 @keyframes fadeUp {
   0% {
@@ -181,4 +229,9 @@ body {
     opacity: 1;
     transform: translateY(0);   
   }
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
 }
