@@ -158,6 +158,76 @@ body{
 }
 
 
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .mainwrap{
+    margin-top: 10px;
+    padding-left: 9vw;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    height: 110vh;
+}
+
+.mainwrap section{
+    scroll-snap-align: center;
+    height: 100vh;
+}
+
+.mainwrap section h1{
+    font-size: 3em;
+}
+
+.mainwrap section h2{
+    font-size: 2em;
+}
+
+.mainwrap section p{
+    font-size: 1.2em;
+}
+
+#menu{
+    display: block;
+}
+
+#menu p{
+    width: 70vw;
+}
+
+#foodcaro{
+    transform: translateX(6.5em);
+    display: block;
+}
+
+.fooditem p{
+    transform: translateY(2vh) translateX(6vw);
+}
+
+#prev{ 
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-right: 2em solid #ffe2df;
+    border-bottom: 1em solid transparent;
+    position: absolute;
+    transform: translateX(-5vw) translateY(20vh);
+}
+
+
+
+#next{
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-left: 2em solid #ffe2df;
+    border-bottom: 1em solid transparent;
+    position: absolute;
+    transform: translateX(43vw) translateY(20vh);
+}
+
+}
+
+
+
 /* Fading animation */
 .fade {
   animation-name: fade;
