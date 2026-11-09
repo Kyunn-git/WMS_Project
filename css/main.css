@@ -10,7 +10,7 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
 
 #navbar{
     background: #000000;
-    height: 5vw;
+    height: 8vh;
     position: sticky;
     width: 100%;
     display: grid;
@@ -26,17 +26,26 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
     height: 5vh;
     transform: translateY(14px);
     text-align: center;
+    overflow: hidden;
 }
+
 
 .navbuttons a{
     width: 10vw;
     background-color: #FFE2D1;
     color: #000000;
     margin: 5px;
-    font-size: 25px;
+    font-size: 1.3em;
     text-align: center;
     text-decoration: none;
 }
+
+
+.navbuttons a:hover{  
+    background-color: #c7aea0;
+
+}
+
 
 #navbar h1 a{
     text-decoration: none;
