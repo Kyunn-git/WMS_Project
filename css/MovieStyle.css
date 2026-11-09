@@ -99,6 +99,23 @@ body {
     visibility: visible;
 }
 
+.book-btn {
+    font-family: 1em;
+    display: inline-block;
+    padding: 1vw 1vw;
+    margin-top: 1vw;
+    border-radius: .1vw;
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #ffcfb4;
+}
+
 .showinfo {
     display: flex;
     flex-direction: column;
