@@ -6,193 +6,30 @@
     <title>Confirmation</title>
     <link rel="stylesheet" href="css/confirmation.css">
     <link rel="stylesheet" href="css/main.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="navbar" style="z-index: 2;">
+     <div id="navbar" style="z-index: 2;">
         <h1><a href="index.html">Coffee Roll</a></h1>
         <div class="navbuttons">
             <a href="Movies.html">Book</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact Us</a>
-        </div>
-  <script src="navbar.js"></script></div>
+    </div>
+        <script src="navbar.js"></script></div>
+
   <main>
     <div class="page-head">
-      <h1>You're booked!</h1>
-      <p>Show the QR code or your reference ID at the entrance. You can also print this page as your ticket.</p>
+      <h1>You're booked.</h1>
+      <p>Thank you for your payment. Your booking is confirmed.</p>
+      <p>Your booking details and QR code have been sent to your email. Please show the QR code at the entrance.</p>
     </div>
-
-    <p class="sample-note" id="sampleNote" hidden>
-      Showing a sample booking because no booking data was found. Complete a booking first to see your own.
-    </p>
-
-    <article class="ticket" aria-label="Booking summary">
-      <div class="ticket__main">
-        <span class="ticket__status">Payment received</span>
-        <h2 class="ticket__movie" id="movieTitle"></h2>
-        <p class="ticket__sub" id="cinemaName"></p>
-
-        <dl class="details">
-          <div><dt>Date</dt><dd id="showDate"></dd></div>
-          <div><dt>Time</dt><dd id="showTime"></dd></div>
-          <div><dt>Hall</dt><dd id="hall"></dd></div>
-          <div><dt>Seats</dt><dd id="seats"></dd></div>
-          <div><dt>Booked by</dt><dd id="customer"></dd></div>
-        </dl>
-
-        <table class="order">
-          <caption>What you bought</caption>
-          <thead><tr><th>Item</th><th>Qty</th><th>Price</th></tr></thead>
-          <tbody id="orderRows"></tbody>
-          <tfoot><tr><td colspan="2">Total paid</td><td id="total"></td></tr></tfoot>
-        </table>
-      </div>
-
-      <aside class="ticket__stub">
-        <div class="qr-box" id="qrBox"></div>
-        <div>
-          <p class="ref-label">Reference ID</p>
-          <p class="ref-id" id="refId"></p>
-        </div>
-        <p class="stub-hint">Scan at the entrance</p>
-      </aside>
-    </article>
 
     <div class="actions">
-      <button class="btn" id="printBtn" type="button">Print ticket</button>
-      <button class="btn btn--ghost" id="copyBtn" type="button">Copy reference ID</button>
       <a class="btn btn--olive" href="index.html">Back to home</a>
     </div>
-    <p class="toast" id="toast" role="status" aria-live="polite"></p>
   </main>
-
-  <script>
-    (function () {
-  "use strict";
-
-  var STORAGE_KEY = "cinemaBooking";
-
-  var SAMPLE = {
-    movie: "Dune: Part Two",
-    cinema: "Showtime Cinema, Sunway Pyramid",
-    date: "2026-11-14",
-    time: "8:30 PM",
-    hall: "Hall 3",
-    seats: ["F7", "F8"],
-    customerName: "Ilyasa",
-    items: [
-      { label: "Adult ticket", qty: 2, price: 18 },
-      { label: "Popcorn combo", qty: 1, price: 15 }
-    ]
-  };
-
-  function $(id) { return document.getElementById(id); }
-
-  function loadBooking() {
-    try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        var data = JSON.parse(raw);
-        if (data && data.movie) return { booking: data, isSample: false };
-      }
-    } catch (e) { }
-    return { booking: JSON.parse(JSON.stringify(SAMPLE)), isSample: true };
-  }
-
-  function makeRef() {
-    var chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; 
-    var out = "";
-    for (var i = 0; i < 8; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
-    return "SHW-" + out;
-  }
-
-  function money(n) { return "RM " + Number(n).toFixed(2); }
-
-  function formatDate(iso) {
-    var d = new Date(iso + "T00:00:00");
-    if (isNaN(d)) return iso || "-";
-    return d.toLocaleDateString("en-MY", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
-  }
-
-  function render(b) {
-    $("movieTitle").textContent = b.movie;
-    $("cinemaName").textContent = b.cinema || "";
-    $("showDate").textContent = formatDate(b.date);
-    $("showTime").textContent = b.time || "-";
-    $("hall").textContent = b.hall || "-";
-    $("seats").textContent = (b.seats && b.seats.length) ? b.seats.join(", ") : "-";
-    $("customer").textContent = b.customerName || "-";
-    $("refId").textContent = b.ref;
-
-    var tbody = $("orderRows");
-    var total = 0;
-    (b.items || []).forEach(function (it) {
-      var qty = Number(it.qty) || 1;
-      var line = qty * (Number(it.price) || 0);
-      total += line;
-      var tr = document.createElement("tr");
-      [it.label, qty, money(line)].forEach(function (text) {
-        var td = document.createElement("td");
-        td.textContent = text; 
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    });
-    $("total").textContent = money(b.total != null ? b.total : total);
-  }
-
-  function renderQR(b) {
-    var box = $("qrBox");
-    var payload = [
-      "REF:" + b.ref,
-      "MOVIE:" + b.movie,
-      "DATE:" + b.date + " " + b.time,
-      "HALL:" + (b.hall || "-"),
-      "SEATS:" + ((b.seats || []).join(",") || "-")
-    ].join("|");
-
-    if (typeof QRCode === "undefined") {
-      box.innerHTML = '<span class="qr-fallback">QR could not load. Use the reference ID below.</span>';
-      return;
-    }
-    new QRCode(box, { text: payload, width: 156, height: 156, colorDark: "#000000", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M });
-  }
-
-  function toast(msg) {
-    var t = $("toast");
-    t.textContent = msg;
-    setTimeout(function () { t.textContent = ""; }, 2500);
-  }
-
-  var result = loadBooking();
-  var booking = result.booking;
-
-  if (!booking.ref) {
-    booking.ref = makeRef();
-    if (!result.isSample) {
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(booking)); } catch (e) {}
-    }
-  }
-
-  $("sampleNote").hidden = !result.isSample;
-  render(booking);
-  renderQR(booking);
-
-  $("printBtn").addEventListener("click", function () { window.print(); });
-  $("copyBtn").addEventListener("click", function () {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(booking.ref).then(
-        function () { toast("Reference ID copied."); },
-        function () { toast("Could not copy. Please copy it manually."); }
-      );
-    } else {
-      toast("Copy is not supported in this browser.");
-    }
-  });
-})();
-
-  </script>
-
-  <footer class="site-footer">&copy; 2026 All rights reserved.</footer>
 </body>
 </html>
