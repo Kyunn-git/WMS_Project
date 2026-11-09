@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/MovieStyle.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="movies.js"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Limelight&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <title>☕︎ Coffee Roll</title>
 </head>
 <body>
-    <div id="navbar" style="z-index: 2;">
+   <div id="navbar" style="z-index: 2;">
         <h1><a href="index.html">Coffee Roll</a></h1>
         <div class="navbuttons">
             <a href="Movies.html">Book</a>
@@ -38,10 +39,16 @@
             quick watch. We're not just any old cinema, though; we keep      <br>  limited slots for each film,
         leaving ample room for everyone to meet fellow film enthusiasts over a few snacks.</p>
     </div>
+    <div class="filterbtns">
+        <button class="filter" data-target="all">Show All</button>
+        <button class="filter" data-target="november">November Shows</button>
+        <button class="filter" data-target="december">December Shows</button>
+        <button class="filter" data-target="upcoming">TBD</button>
+    </div>
     <div class="upcoming">
         <div class="moviecont">
             <div class="movie movie1">
-            <div class="showinfo">
+            <div class="showinfo" data-category="november">
                 <h3>The Crystal Seer</h3>
                 <p>Release: 2026</p>
                 <p>A mysterious journey into the unknown...</p>
@@ -50,18 +57,27 @@
             </div>
         </div>
         <div class="movie movie2">
-            <div class="showinfo">
-
+            <div class="showinfo" data-category="november">
+                <h3>Kronos</h3>
+                <p>Release: 1957</p>
+                <p>A thrilling adventure through time...</p>
+                <button>Book Now!</button>
             </div>
         </div>
         <div class="movie movie3">
-            <div class="showinfo">
-
+            <div class="showinfo" data-category="november">
+                <h3>La Traviata</h3>
+                <p>Release: 1982</p>
+                <p>A timeless tale of love and sacrifice...</p>
+                <button>Book Now!</button>
             </div>
         </div>
         <div class="movie movie4">
-            <div class="showinfo">
-
+            <div class="showinfo" data-category="december">
+                <h3>Spirited Away</h3>
+                <p>Release: 2001</p>
+                <p>The supernatural adventure of a little heroine...</p>
+                <button>Book Now!</button>
             </div>
         </div>
         <div class="movie movie5">
@@ -71,15 +87,43 @@
         </div>
         <div class="movie movie6">
             <div class="showinfo">
-
             </div>
         </div>
         <div class="movie movie7">
             <div class="showinfo">
-
+            </div>
+        </div>
+        <div class="movie movie7">
+            <div class="showinfo">
             </div>
         </div>
     </div>
+    <table id="dates">
+        <tr>
+            <th>Movie</th>
+            <th>Show Date</th>
+            <th>Show Time</th>
+            <th>Book</th>
+        </tr>
+        <tr>
+            <td>The Crystal Seer</td>
+            <td>15/11/2026</td>
+            <td>3:00PM-5:00PM</td>
+            <td><button>Book Now!</button></td>
+        </tr>
+        <tr>
+            <td>Kronos</td>
+            <td>19/11/2026</td>
+            <td>11:00AM-1:00PM</td>
+            <td><button>Book Now!</button></td>
+        </tr>
+        <tr>
+            <td>La Traviata</td>
+            <td>21/11/2026</td>
+            <td>7:00PM-9:00PM</td>
+            <td><button>Book Now!</button></td>
+        </tr>
+    </table>
     <div class="footer">
         <div></div>
     </div>
