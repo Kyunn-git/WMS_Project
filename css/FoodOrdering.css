@@ -94,3 +94,30 @@ main{
 .FoodCatogaries hr {
     width: 80vw;
 }
+
+#foodcart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-weight: bold;
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    background-color: #FFE2D1;
+    color: #4F0E14;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    font-size: 2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#foodcart:hover {
+    transform: scale(1.08);
+    background-color: #ffcfb4;
+}
