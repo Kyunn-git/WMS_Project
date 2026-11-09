@@ -15,7 +15,7 @@ body {
 
 .upcoming { 
     opacity: 0; 
-    animation-delay: 0.3s !important;
+    animation-delay: 0.5s !important;
     animation: fadeUp 1s ease-out forwards;
     margin: 0 auto 0 auto; 
     max-height: 70vw;
@@ -27,7 +27,33 @@ body {
     overflow-y: auto;
 }
 
+.filterbtns {
+    opacity: 0; 
+    animation-delay: 0.3s !important;
+    animation: fadeUp 1s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+    margin: 0;
+}
+
+.filter {
+    font-family: "PT Serif", serif;
+    font-weight: medium;
+    background-color: #FFE2D1;
+    color: #4F0E14;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .movie {
+    display: flex;
+    flex-direction: column;
     position: relative; 
     flex-shrink: 0;
     width: 20vw;
@@ -43,8 +69,25 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin: 1vw;
     margin-left: 1vw;
+}
+
+
+.showinfo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 200px; 
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #FFE2D1;
+    padding: 15px;
+    border-radius: 1vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .movie1 {
@@ -81,22 +124,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-
-.showinfo {
-    position: absolute;
-    top: 0;
-    z-index: 100;
-    width: 200px; 
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #FFE2D1;
-    padding: 15px;
-    border-radius: 1vw;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-
 .movie:hover .showinfo {
     opacity: 1;
     visibility: visible;
@@ -114,6 +141,13 @@ body {
     text-align: center;
 }
 
+#dates {
+    border: .1vw solid #FFE2D1;
+    border-collapse: collapse;
+    margin: 0 auto;
+    align-self: center;
+}
+
 .footer {
     background-color: black;
     display: flex;
@@ -129,4 +163,8 @@ body {
     opacity: 1;
     transform: translateY(0);   
   }
+}
+
+.hidden {
+  display: none !important;
 }
