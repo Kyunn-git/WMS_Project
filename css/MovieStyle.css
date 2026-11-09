@@ -6,7 +6,7 @@ body {
 
 .header {
     opacity: 0;
-    animation-delay: 0;
+    animation-delay: 0; 
     display: flex;
     animation: fadeUp 1s ease-out forwards;
     flex-direction: column;
@@ -245,6 +245,10 @@ h2 {
     margin-left: 35vw;
     margin-top: 0;
     margin-bottom: 2vw;
+}
+
+.fade {
+    animation: fadeInAnimation 0.4s ease-in-out forwards;
 }
 
 @keyframes fadeUp {
