@@ -42,11 +42,13 @@ body{
 
 /* Intro */
 #intro p{
+    animation: intofade 1s;
     text-align: left;
     width: 50vw;
 }
 
 #intro{
+    animation: intofade 1s;
     padding-top: 10vh;
 }
 /* Booking promotion */
@@ -236,5 +238,10 @@ body{
 
 @keyframes fade {
   from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes intofade {
+  from {opacity: 0} 
   to {opacity: 1}
 }

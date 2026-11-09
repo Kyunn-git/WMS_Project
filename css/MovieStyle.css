@@ -160,6 +160,18 @@ body {
     flex-direction: row;
 }
 
+.hidden {
+    opacity: 0 !important;
+    transform: scale(0.8) !important;
+    max-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+/* Fade up animation (previously in moviestyle.css) */
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -169,14 +181,4 @@ body {
     opacity: 1;
     transform: translateY(0);   
   }
-}
-
-.hidden {
-    opacity: 0 !important;
-    transform: scale(0.8) !important;
-    max-width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none;
 }
