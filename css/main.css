@@ -3,7 +3,6 @@ body {
 background-color: #000000;
 background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%);
  color: #FFE2D1;
- height: 3000px;
  margin: 0%;
  overscroll-behavior:contain contain;
  font-family: "PT Serif", serif;
@@ -11,7 +10,7 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
 
 #navbar{
     background: #000000;
-    height: 5vw;
+    height: 8vh;
     position: sticky;
     width: 100%;
     display: grid;
@@ -27,17 +26,26 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
     height: 5vh;
     transform: translateY(14px);
     text-align: center;
+    overflow: hidden;
 }
+
 
 .navbuttons a{
     width: 10vw;
     background-color: #FFE2D1;
     color: #000000;
     margin: 5px;
-    font-size: 25px;
+    font-size: 1.3em;
     text-align: center;
     text-decoration: none;
 }
+
+
+.navbuttons a:hover{  
+    background-color: #c7aea0;
+
+}
+
 
 #navbar h1 a{
     text-decoration: none;
@@ -52,3 +60,76 @@ background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgb(79, 14, 20) 56%
     font-size: 101%;
     transition-duration: 120ms;
 }
+
+/* Navbar Responsive */
+
+#navVertical{
+    background-color: #000000;
+    width: 50vw;
+    height: 100%;
+    position:absolute;
+    margin: none;
+    top: 0;
+    padding-left: 2vw; 
+    transition-duration: 120ms;
+    display: none;
+    transform: translateX(-17em);
+}
+
+#navVertical h1 a{
+    text-decoration: none;
+    color: #FFE2D1;
+    padding-left: 2vw;
+    transition-duration: 120ms;
+    font-family: Limelight;
+}
+
+#navVertical h1 a:hover{
+    color: #c7aea0;
+    font-size: 101%;
+    transition-duration: 120ms;
+}
+
+.navbuttonsV{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbuttonsV a{
+    width: 40vw;
+    background-color: #FFE2D1;
+    color: #000000;
+    margin: 5px;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 120ms;
+}
+
+#pullNav{
+    float: right;
+    transform: translateX(20px);
+    font-size:4.5vh;
+    font-style: oblique;
+    width: 1em;
+    height: 1.5em;
+    background-color: #c7aea0;
+    color: #000000;
+    border-radius: 0 8px 8px 0px;
+}
+
+.navbuttonsV a:hover{  
+    background-color: #c7aea0;
+
+}
+
+
+@media only screen and (max-width: 600px) { 
+    #navbar{
+        display: none;
+    }
+    #navVertical{
+        display:block;
+    }
+}
+

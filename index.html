@@ -13,14 +13,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Limelight&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar" style="z-index: 2;">
+   <div id="navbar" style="z-index: 2;">
         <h1><a href="index.html">Coffee Roll</a></h1>
         <div class="navbuttons">
             <a href="Movies.html">Book</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact Us</a>
+    </div>
+    </div>
+    <div id="navVertical" style="z-index: 2;">
+        <span id="pullNav" onclick="toggleSidebar()">></span>
+        <h1><a href="index.html">Coffee Roll</a></h1>
+        <div class="navbuttonsV">
+            <a href="Movies.html">Book</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact Us</a>
         </div>
-        <script src="navbar.js"></script></div>
+    </div>
+        <script src="navbar.js"></script>
         <!-- COPY-PASTE PORTION ENDS HERE -->
     <div class="mainwrap">
         <section id="intro">
@@ -74,20 +84,21 @@
             <a href="menu.html">Menu</a>
             </div>
             <div id="foodcaro">
-                <div id="prev"></div>
-                <div class="fooditem" data-active>
+                
+                <div class="fooditem fade">
                     <p>Avocado Toast</p>
                     <img src="imgs/bread.png">
                 </div>
-                 <div class="fooditem">
-                    <p>Avocado Toast</p>
+                 <div class="fooditem fade">
+                    <p>Taiyaki Sharing Plate</p>
                     <img src="imgs/taiyaki.png">
                  </div>
-                 <div class="fooditem">
-                    <p>Avocado Toast</p>
+                 <div class="fooditem fade">
+                    <p>Bunny Yogurt Bowl</p>
                     <img src="imgs/yogurtbowl.png">
                  </div>
-                 <div id="next"></div>
+                 <div id="prev" onclick="plusSlides(-1)"></div>
+                 <div id="next" onclick="plusSlides(1)"></div>
             </div>
         </section>
         <section id="contact">
@@ -99,5 +110,6 @@
             <a href="contact.html">Inquire</a>
         </section>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -18,8 +18,18 @@
             <a href="Movies.html">Book</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact Us</a>
+    </div>
+    </div>
+    <div id="navVertical" style="z-index: 2;">
+        <span id="pullNav" onclick="toggleSidebar()">></span>
+        <h1><a href="index.html">Coffee Roll</a></h1>
+        <div class="navbuttonsV">
+            <a href="Movies.html">Book</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact Us</a>
         </div>
-        <script src="navbar.js"></script></div>
+    </div>
+        <script src="navbar.js"></script>
   <main>
     <div class="page-head">
       <h1>Contact us</h1>
@@ -28,9 +38,9 @@
 
     <div class="contact-grid">
       <ul class="info-list">
-        <li><h2>Visit us</h2><p>Coffee Roll Cafe <br> 24 Random Street, <br>275000</p></li>
+        <li><h2>Visit us</h2><p>Watch Party Cafe</p></li>
         <li><h2>Call us</h2><p>+60 3-1234 5678<br>Daily, 10 AM to 10 PM</p></li>
-        <li><h2>Email us</h2><p>CRcafe@gmail.com</p></li>
+        <li><h2>Email us</h2><p>support@watchpartycafe.example</p></li>
       </ul>
 
       <section class="form-card" aria-labelledby="formTitle">
@@ -40,7 +50,7 @@
           <div class="field-row">
             <div class="field">
               <label for="name">Full name</label>
-              <input type="text" id="name" name="name" autocomplete="name" placeholder="Aisha Rahman" required>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your name" required>
               <span class="error-msg" id="nameError"></span>
             </div>
             <div class="field">
@@ -86,15 +96,93 @@
           <button class="btn" type="submit">Send message</button>
         </form>
 
-        <div class="form-success" id="formSuccess" hidden role="status">
-          <h2>Message sent</h2>
-          <p id="successText"></p>
-          <button class="btn btn--ghost" id="newMessageBtn" type="button">Send another message</button>
-        </div>
       </section>
     </div>
-  </main>
 
-  <footer class="site-footer">&copy; 2026 All rights reserved.</footer>
+    <script>
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const successText = document.getElementById('successText');
+    const newMessageBtn = document.getElementById('newMessageBtn');
+    const popup = document.getElementById('popup');
+    const popupText = document.getElementById('popupText');
+    const popupClose = document.getElementById('popupClose');
+    const messageBox = document.getElementById('message');
+    const counter = document.getElementById('counter');
+
+    // Character counter
+    messageBox.addEventListener('input', function () {
+      counter.textContent = messageBox.value.length + ' / 500';
+    });
+
+    function setError(id, text) {
+      document.getElementById(id).textContent = text;
+    }
+
+    function validate() {
+      let ok = true;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = messageBox.value.trim();
+
+      ['nameError', 'emailError', 'phoneError', 'referenceError', 'subjectError', 'messageError']
+        .forEach(function (id) { setError(id, ''); });
+
+      if (name === '') { setError('nameError', 'Please enter your name.'); ok = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError('emailError', 'Please enter a valid email.'); ok = false;
+      }
+      if (phone !== '' && !/^[0-9+\-\s]{9,15}$/.test(phone)) {
+        setError('phoneError', 'Please enter a valid phone number.'); ok = false;
+      }
+      if (subject === '') { setError('subjectError', 'Please choose a subject.'); ok = false; }
+      if (message === '') { setError('messageError', 'Please enter a message.'); ok = false; }
+
+      return ok;
+    }
+
+    function openPopup(text) {
+      popupText.textContent = text;
+      popup.hidden = false;
+      popupClose.focus();
+    }
+
+    function closePopup() {
+      popup.hidden = true;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validate()) return;
+
+      const name = document.getElementById('name').value.trim();
+      const text = 'Thank you, ' + name + '. We will reply within 2 working days.';
+
+      successText.textContent = text;
+      openPopup(text);
+
+      form.hidden = true;
+      formSuccess.hidden = false;
+      form.reset();
+      counter.textContent = '0 / 500';
+    });
+
+    newMessageBtn.addEventListener('click', function () {
+      formSuccess.hidden = true;
+      form.hidden = false;
+    });
+
+    popupClose.addEventListener('click', closePopup);
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) closePopup();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !popup.hidden) closePopup();
+    });
+  </script>
+
+  </main>
 </body>
 </html>

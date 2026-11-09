@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Roll</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/seatBooking.css">
+        <!-- Fonts (COPY FOR ALL PAGES)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div id="navbar" style="z-index: 2;">
+        <h1><a href="index.html">Coffee Roll</a></h1>
+        <div class="navbuttons">
+            <a href="Movies.html">Book</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact Us</a>
+    </div>
+    </div>
+    <div id="navVertical" style="z-index: 2;">
+        <span id="pullNav" onclick="toggleSidebar()">></span>
+        <h1><a href="index.html">Coffee Roll</a></h1>
+        <div class="navbuttonsV">
+            <a href="Movies.html">Book</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+        <script src="navbar.js"></script>
+    <div class="mainwrap">
+    <h1>Choose Your Seats</h1>
+    <div class="contentwrap">
+        <div class="seatpicker">
+            <p style="font-weight: bold; font-size: 2em; text-align: center;">Pick from the available seats below!</p>
+            <p>Due to limited seating, we only allow reserve for one seat per booking. Please contact us if you are coming in a group of 5 or more people</p>
+            <form action="">
+                <label for="pax"><h2>I am booking for...</h2></label>
+                <select name="pax" id="noPax">
+                    <option value="" disabled selected>Select No. Pax</option>
+                    <option onclick="twoPax()" value="duo">1-2 people</option>
+                    <option onclick="fourPax()" value="group">3-4 people</option>
+                </select>
+                    <div id="seatType">
+                        <img id="twopaxPrev" src="imgs/duoseat.png">
+                        <img id="fourpaxPrev" src="imgs/roundseat.png">
+                    </div>
+                    <h2>Seat Selection</h2>
+                <div id="duoSeatSelector" style="display: none;">
+                    <label for="seat1">Seat 1</label>
+                    <input onclick="checkSeat()" type="radio" id="seat1" name="SeatOption" value="1">
+                    <label for="seat2">Seat 2</label>
+                    <input onclick="checkSeat()" type="radio" id="seat2" name="SeatOption" value="2">
+                    <label for="seat3">Seat 3</label>
+                    <input onclick="checkSeat()" type="radio" id="seat3" name="SeatOption" value="3">   
+                    <label for="seat6">Seat 6</label>
+                    <input onclick="checkSeat()" type="radio" id="seat6" name="SeatOption" value="6">
+                    <label for="seat7">Seat 7</label>
+                    <input onclick="checkSeat()" type="radio" id="seat7" name="SeatOption" value="7">
+                    <label for="seat8">Seat 8</label>
+                    <input onclick="checkSeat()" type="radio" id="seat8" name="SeatOption" value="8">                                 
+                </div>
+                <div id="fourSeatSelector" style="display: none;">
+                    <label for="seat4">Seat 4</label>
+                    <input onclick="checkSeat()" type="radio" id="seat4" name="SeatOption" value="4">
+                    <label for="seat5">Seat 5</label>
+                    <input onclick="checkSeat()" type="radio" id="seat5" name="SeatOption" value="5">
+                </div>
+            </form>
+            <div class="details">
+                <h2>Booking Details</h2>
+                <p>Pax Booked: <span id="paxBooked"></span></p> 
+                <p>Seat: <span id="seatSelected"></span></p>
+            </div>
+            <a href="FoodOrdering.html" class="goNext">NEXT</a>
+            <script src="seatBooking.js"></script>
+        </div>
+        <div class="seatlayout">
+            <h2 style="text-align: center;">Cafe Layout</h2>
+            <div class="layoutDisp">
+                <div class="moviescreen">Screen</div>
+                <div class="row1">
+                    <div class="chairs">
+                        <div class="chairitem">
+                            <p>SEAT 1</p>
+                            <img src="imgs/duoseat.png">
+                        </div>
+                        <div class="chairitem">
+                            <p>SEAT 2</p>
+                            <img src="imgs/duoseat.png">
+                        </div>
+                        <div class="chairitem">
+                            <p>SEAT 3</p>
+                            <img src="imgs/duoseat.png">
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="chairs">
+                        <div class="chairitem">
+                            <p>SEAT 4</p>
+                            <img src="imgs/roundseat.png">
+                        </div>
+                        <div class="chairitem">
+                            <p>SEAT 5</p>
+                            <img src="imgs/roundseat.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row3">
+                        <div class="chairs">
+                            <div class="chairitem">
+                                <p>SEAT 6</p>
+                                <img src="imgs/duoseat.png">
+                            </div>
+                            <div class="chairitem">
+                                <p>SEAT 7</p>
+                                <img src="imgs/duoseat.png">
+                            </div>
+                            <div class="chairitem">
+                                <p>SEAT 8</p>
+                                <img src="imgs/duoseat.png">
+                            </div>                       
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+</body>
+</html>

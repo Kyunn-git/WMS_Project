@@ -1,0 +1,111 @@
+
+.mainwrap{
+    margin: 5vw;
+}
+
+.contentwrap{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Seat Booking */
+
+.seatpicker{
+    background-color: black;
+    width: 55vw;
+    padding: 1.5vw;
+}
+
+
+.seatpicker form{
+    margin-right: 10vw;
+    margin-top: 40px;
+}
+
+#seatType{
+    float: right;
+    transform: translateY(-4vh);
+}
+
+#seatType img{
+    width: 9vw;
+    height: inherit;
+    position: absolute;
+}
+
+.goNext{
+    display: block;
+    background-color: #525636;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ffe2df;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+select{
+    background-color: #525636;
+    color: #ffe2df  ;
+    width: 15em;
+}
+
+/* Seat display */
+
+.seatlayout{
+    background-color: black;
+    width: 30vw;
+}
+
+
+.layoutDisp{
+    display: grid;
+    grid-template-areas:
+    'moviescreen moviescreen moviescreen'
+    'row1 row2 row3'
+    'row1 row2 row3'  
+    'row1 row2 row3'
+    ;
+    justify-content:space-evenly;
+}
+
+.chairs{
+    display: flex;
+    flex-direction: column;
+}
+
+.chairitem{
+    text-align: center;
+}
+
+.chairitem p{
+    margin-bottom: -10px;
+}
+
+.layoutDisp img{
+    max-width: 7vw;
+    height: inherit;
+}
+
+.row1{
+    grid-area: row1;
+}
+
+.row2{
+    grid-area: row2;
+}
+
+.row3{
+    grid-area: row3;
+}
+
+.moviescreen{
+    background-color: #ffe2df;
+    height: 5vh;
+    text-align: center;
+    color: black;
+    font-family: LimeLight, serif;
+    font-size: 2em;
+    grid-area: moviescreen;
+}
