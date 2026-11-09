@@ -101,9 +101,10 @@ body {
 
 .book-btn {
     font-family: 1em;
+    color: white;
+    border: solid .1vw #FFE2D1;
     display: inline-block;
     padding: 1vw 1vw;
-    margin-top: 1vw;
     border-radius: .1vw;
     text-decoration: none;
     font-family: "PT Serif", serif;
@@ -113,15 +114,16 @@ body {
 }
 
 .book-btn:hover {
-    background-color: #ffcfb4;
+    background-color: #f4c8b0;
 }
 
 .showinfo {
     display: flex;
     flex-direction: column;
     position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: solid .2vw #FFE2D1;
     top: 0;
-    z-index: 100;
     width: 200px; 
     background-color: rgba(0, 0, 0, 0.9);
     color: #FFE2D1;
@@ -201,12 +203,20 @@ body {
     align-self: center;
     border-collapse: collapse;
     margin-bottom: 2vw;
+    background-color: #0000003a;
+}
+
+th {
+    background-color: #000000;
+    color: #FFE2D1;
+    font-size: 1.1em;
+    font-style: italic;
 }
 
 th, td {
-    padding: 10px;
+    padding: .5vw;
     text-align: center;
-    border: .1vw solid #FFE2D1;
+    border: .1vw solid #ffe2d130;
 }
 
 .footer {
