@@ -13,20 +13,20 @@
 </head>
 <body>
     <div id="navbar" style="z-index: 2;">
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttons">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
     </div>
     </div>
     <div id="navVertical" style="z-index: 2;">
         <span id="pullNav" onclick="toggleSidebar()">></span>
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttonsV">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
         <script src="navbar.js"></script>
