@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    include 'database/connect_db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,10 +157,5 @@
             <td><a href="seatBooking.php?movie=Hong%20Kong%201997" class="book-btn">Book Now!</a></td>
         </tr>
     </table>
-    <div class="footer">
-        <div>
-            <p>© 2026 Coffee Roll. All rights reserved.</p>
-        </div>
-    </div>  
 </body>
 </html>
