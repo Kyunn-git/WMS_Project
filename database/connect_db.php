@@ -6,7 +6,13 @@ $dbname = 'coffeeroll';
 
 $conn = new mysqli($servername, $username, $password,$dbname);
 
-if ($conn -> connect_error) {
-    die('Connection  failed:' . $conn -> connect_error);
+
+if(!$conn){
+    echo "connection not created!";
+
 }
+else{
+    echo"connection created";
+}
+
 ?>
