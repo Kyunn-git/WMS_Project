@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'database/connect_db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +18,20 @@
 </head>
 <body>
    <div id="navbar" style="z-index: 2;">
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttons">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
     </div>
     </div>
     <div id="navVertical" style="z-index: 2;">
         <span id="pullNav" onclick="toggleSidebar()">></span>
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttonsV">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
         <script src="navbar.js"></script>
@@ -51,7 +55,7 @@
                 <p>Release: 2026</p>
                 <p>A mysterious journey into the unknown...</p>
                 <p>15/11/2026 | 3:00PM-5:00PM</p>
-                <a href="seatBooking.html?movie=The%20Crystal%20Seer" class="book-btn">Book Now!</a>
+                <a href="seatBooking.php?movie=The%20Crystal%20Seer" class="book-btn">Book Now!</a>
             </div>
         </div>
         <div class="movie movie2" data-category="november">
@@ -60,7 +64,7 @@
                 <p>Release: 1957</p>
                 <p>A thrilling adventure through time...</p>
                 <p>19/11/2026 | 11:00AM-1:00PM</p>
-               <a href="seatBooking.html?movie=Kronos" class="book-btn">Book Now!</a>
+               <a href="seatBooking.php?movie=Kronos" class="book-btn">Book Now!</a>
             </div>
         </div>
         <div class="movie movie3" data-category="november">
@@ -69,7 +73,7 @@
                 <p>Release: 1982</p>
                 <p>A timeless tale of love and sacrifice...</p>
                 <p>21/11/2026 | 7:00PM-9:00PM</p>
-                <a href="seatBooking.html?movie=La%20Traviata" class="book-btn">Book Now!</a>
+                <a href="seatBooking.php?movie=La%20Traviata" class="book-btn">Book Now!</a>
             </div>
         </div>
         <div class="movie movie4" data-category="december">
@@ -78,7 +82,7 @@
                 <p>Release: 2001</p>
                 <p>The supernatural adventure of a little heroine...</p>
                 <p>01/12/2026 | 11:00AM-1:00PM</p>
-                <a href="seatBooking.html?movie=Spirited%20Away" class="book-btn">Book Now!</a>
+                <a href="seatBooking.php?movie=Spirited%20Away" class="book-btn">Book Now!</a>
             </div>
         </div>
         <div class="movie movie5" data-category="december">
@@ -87,7 +91,7 @@
                 <p>Release: 1994</p>
                 <p>A look back on Hong Kong's history...</p>
                 <p>06/12/2026 | 5:00PM-7:00PM</p>
-                <a href="seatBooking.html?movie=Hong%20Kong%201997" class="book-btn">Book Now!</a>
+                <a href="seatBooking.php?movie=Hong%20Kong%201997" class="book-btn">Book Now!</a>
             </div>
         </div>
         <div class="movie movie6">
@@ -125,38 +129,33 @@
             <td>The Crystal Seer</td>
             <td>15/11/2026</td>
             <td>3:00PM-5:00PM</td>
-            <td><a href="seatBooking.html?movie=The%20Crystal%20Seer" class="book-btn">Book Now!</a>
+            <td><a href="seatBooking.php?movie=The%20Crystal%20Seer" class="book-btn">Book Now!</a>
 </td>
         </tr>
         <tr>
             <td>Kronos</td>
             <td>19/11/2026</td>
             <td>11:00AM-1:00PM</td>
-            <td><a href="seatBooking.html?movie=Kronos" class="book-btn">Book Now!</a></td>
+            <td><a href="seatBooking.php?movie=Kronos" class="book-btn">Book Now!</a></td>
         </tr>
         <tr>
             <td>La Traviata</td>
             <td>21/11/2026</td>
             <td>7:00PM-9:00PM</td>
-            <td><a href="seatBooking.html?movie=La%20Traviata" class="book-btn">Book Now!</a></td>
+            <td><a href="seatBooking.php?movie=La%20Traviata" class="book-btn">Book Now!</a></td>
         </tr>
         <tr>
             <td>Spirited Away</td>
             <td>01/12/2026</td>
             <td>11:00AM-1:00PM</td>
-            <td><a href="seatBooking.html?movie=Spirited%20Away" class="book-btn">Book Now!</a></td>
+            <td><a href="seatBooking.php?movie=Spirited%20Away" class="book-btn">Book Now!</a></td>
         </tr>
         <tr>
             <td>Hong Kong 1997</td>
             <td>06/12/2026</td>
             <td>5:00PM-7:00PM</td>
-            <td><a href="seatBooking.html?movie=Hong%20Kong%201997" class="book-btn">Book Now!</a></td>
+            <td><a href="seatBooking.php?movie=Hong%20Kong%201997" class="book-btn">Book Now!</a></td>
         </tr>
     </table>
-    <div class="footer">
-        <div>
-            <p>© 2026 Coffee Roll. All rights reserved.</p>
-        </div>
-    </div>  
 </body>
 </html>

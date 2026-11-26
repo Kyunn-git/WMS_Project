@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'database/connect_db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +18,20 @@
 </head>
 <body>
    <div id="navbar" style="z-index: 2;">
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttons">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
     </div>
     </div>
     <div id="navVertical" style="z-index: 2;">
         <span id="pullNav" onclick="toggleSidebar()">></span>
-        <h1><a href="index.html">Coffee Roll</a></h1>
+        <h1><a href="index.php">Coffee Roll</a></h1>
         <div class="navbuttonsV">
-            <a href="Movies.html">Book</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="Movies.php">Book</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
         <script src="navbar.js"></script>
@@ -70,7 +74,7 @@
                         <p>Spirited Away</p>
                     </div>
                 </div>
-                <a href="Movies.html">Book now!</a>
+                <a href="Movies.php">Book now!</a>
             </div>
         </section>
         <section id="menu">
@@ -81,7 +85,7 @@
                 Dietary options of certain food items can be requested in house or online contacts.
                 Take a look at our full menu of available tidbits from the navbar or the button below.
             </p>
-            <a href="menu.html">Menu</a>
+            <a href="menu.php">Menu</a>
             </div>
             <div id="foodcaro">
                 
@@ -107,7 +111,7 @@
                 The folks at Coffee Roll are here to listen to any suggestions, complaints, or rambles you have.
                 Yes, even the ones about your favourite movie. Shoot us a message with our website's contact form!
             </p>
-            <a href="contact.html">Inquire</a>
+            <a href="contact.php">Inquire</a>
         </section>
     </div>
     <script src="index.js"></script>
